@@ -89,18 +89,18 @@ const currentProductSizes = document.querySelectorAll(".size");
 
 menuItems.forEach((item, index) => {
   item.addEventListener("click", () => {
-    
+
     wrapper.style.transform = `translateX(${-100 * index}vw)`;
 
-    
+
     choosenProduct = products[index];
 
-    
+
     currentProductTitle.textContent = choosenProduct.title;
     currentProductPrice.textContent = "$" + choosenProduct.price;
     currentProductImg.src = choosenProduct.colors[0].img;
 
-    
+
     currentProductColors.forEach((color, index) => {
       color.style.backgroundColor = choosenProduct.colors[index].code;
     });
@@ -145,10 +145,8 @@ productButton.addEventListener("click", async () => {
     amount: data.amount,
     currency: "INR",
     order_id: data.id,
-
-    name: "Footwear Store",
+    name: "Nike Store",
     description: choosenProduct.title,
-
     handler: function (response) {
       alert("✅ Payment Successful!");
       console.log(response);
@@ -157,5 +155,5 @@ productButton.addEventListener("click", async () => {
 
   var rzp = new Razorpay(options);
   rzp.open();
-});
 
+});
