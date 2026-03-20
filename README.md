@@ -115,4 +115,3 @@ http://localhost:5500
 
 
 
-If you like this project, please give it a ⭐ on GitHub!
