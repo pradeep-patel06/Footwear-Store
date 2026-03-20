@@ -7,8 +7,8 @@ app.use(express.json());
 app.use(cors());
 
 const razorpay = new Razorpay({
-  key_id: "rzp_test_ST6tzo5xqfNtgJ",
-  key_secret: "po4pU21uU2V0RJsk9GLoMjTe"
+  key_id: process.env.KEY_ID,
+  key_secret: process.env.KEY_SECRET
 });
 
 app.post("/create-order", async (req, res) => {
@@ -26,4 +26,8 @@ app.post("/create-order", async (req, res) => {
 
 app.listen(5000, () => {
   console.log("Server running on port 5000");
+});
+
+app.get("/", (req, res) => {
+  res.send("Server is running ✅");
 });

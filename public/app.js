@@ -128,7 +128,7 @@ const productButton = document.querySelector(".productButton");
 
 productButton.addEventListener("click", async () => {
 
-  const res = await fetch("http://localhost:5000/create-order", {
+  const res = await fetch("https://nike-store-backend.onrender.com/create-order", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -145,7 +145,7 @@ productButton.addEventListener("click", async () => {
     amount: data.amount,
     currency: "INR",
     order_id: data.id,
-    name: "Nike Store",
+    name: "Footwear Store",
     description: choosenProduct.title,
     handler: function (response) {
       alert("✅ Payment Successful!");
