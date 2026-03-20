@@ -1,7 +1,7 @@
 {
   "name": "footwear-store",
   "version": "1.0.0",
-  "description": "",
+  "description": "A modern **Footwear Store E-commerce Website** built using **HTML, CSS, JavaScript, and Razorpay Payment Gateway**.\r This project demonstrates a simple online shopping experience where users can browse shoes, select products, and make secure payments.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

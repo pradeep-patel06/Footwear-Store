@@ -146,7 +146,7 @@ productButton.addEventListener("click", async () => {
     currency: "INR",
     order_id: data.id,
 
-    name: "Nike Store",
+    name: "Footwear Store",
     description: choosenProduct.title,
 
     handler: function (response) {
