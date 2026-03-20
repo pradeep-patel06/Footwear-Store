@@ -125,13 +125,37 @@ currentProductSizes.forEach((size, index) => {
 });
 
 const productButton = document.querySelector(".productButton");
-const payment = document.querySelector(".payment");
-const close = document.querySelector(".close");
 
-productButton.addEventListener("click", () => {
-  payment.style.display = "flex";
+productButton.addEventListener("click", async () => {
+
+  const res = await fetch("http://localhost:5000/create-order", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      amount: choosenProduct.price * 100
+    })
+  });
+
+  const data = await res.json();
+
+  var options = {
+    key: "rzp_test_ST6tzo5xqfNtgJ",
+    amount: data.amount,
+    currency: "INR",
+    order_id: data.id,
+
+    name: "Nike Store",
+    description: choosenProduct.title,
+
+    handler: function (response) {
+      alert("✅ Payment Successful!");
+      console.log(response);
+    }
+  };
+
+  var rzp = new Razorpay(options);
+  rzp.open();
 });
 
-close.addEventListener("click", () => {
-  payment.style.display = "none";
-});
