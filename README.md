@@ -109,7 +109,7 @@ http://localhost:5500
 
 **Pradeep Patel**
 
-* GitHub: https://github.com/pradeep-patel06
+* GitHub: https://github.com/pradeep-patel06/Footwear-Store
 
 ---
 
