@@ -27,24 +27,27 @@ This project demonstrates a simple online shopping experience where users can br
 
 ---
 
-## 📂 Project Structure
+##Project Structure
 
-Footwear-Store
+footwear-store/
 │
-├── index.html
-├── style.css
-├── app.js
-├── server.js
-├── package.json
-├── README.md
+├── backend/                     # Node.js + Express server
+│   ├── server.js                # Main server file
+│   ├── package.json             # Node dependencies
+│   ├── package-lock.json
+│   └── .env                     # Environment variables (KEY_ID, KEY_SECRET)
 │
-├── img/
-│ ├── air.png
-│ ├── jordan.png
-│ ├── blazer.png
-│ ├── crater.png
-│ └── hippie.png
-
+├── frontend/                    # HTML, CSS, JS files
+│   ├── index.html               # Main website page
+│   ├── style.css                # Stylesheet
+│   ├── app.js                   # Frontend logic + Razorpay integration
+│   └── img/                     # Image assets
+│       ├── air.png
+│       ├── jordan.png
+│       └── ...                  # Other images
+│
+├── README.md                    # Project documentation
+└── .gitignore                   # To ignore node_modules, .env etc.
 ---
 
 ## 💳 Payment Gateway
