@@ -128,7 +128,7 @@ const productButton = document.querySelector(".productButton");
 
 productButton.addEventListener("click", async () => {
 
-  const res = await fetch("http://localhost:5000/create-order", {
+  const res = await fetch("https://footwear-store-backend.onrender.com/create-order", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -144,12 +144,11 @@ productButton.addEventListener("click", async () => {
     key: "rzp_test_ST6tzo5xqfNtgJ",
     amount: data.amount,
     currency: "INR",
-    order_id: data.id,
     name: "Footwear Store",
-    description: choosenProduct.title,
+    description: "Test Transaction",
+    order_id: data.id,
     handler: function (response) {
-      alert("✅ Payment Successful!");
-      console.log(response);
+      alert("Payment Successful 🎉");
     }
   };
 
