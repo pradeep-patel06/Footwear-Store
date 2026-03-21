@@ -31,24 +31,23 @@ This project demonstrates a simple online shopping experience where users can br
 
 footwear-store/
 │
-├── backend/                     # Node.js + Express server
-│   ├── server.js                # Main server file
-│   ├── package.json             # Node dependencies
+├── backend/                  # Node.js + Express server
+│   ├── server.js             # Main server file
+│   ├── package.json          # Node dependencies
 │   ├── package-lock.json
-│   └── .env                     # Environment variables (KEY_ID, KEY_SECRET)
+│   └── .env                  # Environment variables (KEY_ID, KEY_SECRET)
 │
-├── frontend/                    # HTML, CSS, JS files
-│   ├── index.html               # Main website page
-│   ├── style.css                # Stylesheet
-│   ├── app.js                   # Frontend logic + Razorpay integration
-│   └── img/                     # Image assets
+├── frontend/                 # HTML, CSS, JS files
+│   ├── index.html            # Main page
+│   ├── style.css             # Stylesheet
+│   ├── app.js                # Frontend logic + Razorpay integration
+│   └── img/                  # Images
 │       ├── air.png
 │       ├── jordan.png
-│       └── ...                  # Other images
+│       └── ...               # Other images
 │
-├── README.md                    # Project documentation
-└── .gitignore                   # To ignore node_modules, .env etc.
----
+├── README.md                 # Project documentation
+└── .gitignore                # Ignore node_modules, .env, etc.
 
 ## 💳 Payment Gateway
 
