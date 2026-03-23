@@ -128,7 +128,7 @@ const productButton = document.querySelector(".productButton");
 
 productButton.addEventListener("click", async () => {
 
-  const res = await fetch("https://footwear-backend.onrender.com/save-order", {
+  const res = await fetch("https://footwear-store-9.onrender.com/create-order", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
