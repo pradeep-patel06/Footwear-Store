@@ -128,7 +128,7 @@ const productButton = document.querySelector(".productButton");
 
 productButton.addEventListener("click", async () => {
 
-  const res = await fetch("http://localhost:5000/create-order", {
+  const res = await fetch("https://footwear-backend.onrender.com/create-order", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -147,13 +147,27 @@ productButton.addEventListener("click", async () => {
     order_id: data.id,
     name: "Footwear Store",
     description: choosenProduct.title,
+
     handler: function (response) {
-      alert("✅ Payment Successful!");
-      console.log(response);
-    }
+  alert("✅ Payment Successful!");
+
+  fetch("http://localhost:5000/save-order", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      payment_id: response.razorpay_payment_id,
+      order_id: response.razorpay_order_id,
+      amount: data.amount
+    })
+  })
+  .then(res => res.text())
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
+}
   };
 
   var rzp = new Razorpay(options);
   rzp.open();
-
 });
