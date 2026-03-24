@@ -100,6 +100,6 @@ JSON
 
 Author
 Pradeep Patel
-GitHub: https://github.com/pradeep-patel06⁠�
-Project Repository: https://github.com/pradeep-patel06/Footwear-Store⁠�
+GitHub: https://github.com/pradeep-patel06⁠
+Project Repository: https://github.com/pradeep-patel06/Footwear-Store⁠
    
