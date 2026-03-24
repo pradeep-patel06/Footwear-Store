@@ -85,7 +85,7 @@ KEY_SECRET=your_razorpay_secret
 
 Local Setup
 Bash
-git clone https://github.com/pradeep-patel06/Footwear-Store.git
+git clone https://github.com/pradeep-patel06/Footwear-Store.git   
 cd Footwear-Store
 npm install
 node server.js
