@@ -1,119 +1,107 @@
-#  Footwear Store Website
+# 🛍️ Footwear Store – Full Stack E-Commerce Website
 
-A modern **Footwear Store E-commerce Website** built using **HTML, CSS, JavaScript, and Razorpay Payment Gateway**.
-This project demonstrates a simple online shopping experience where users can browse shoes, select products, and make secure payments.
+A *production-ready full stack e-commerce web application* that enables users to browse products, make secure online payments, and store order data in the cloud.
 
----
-
-## 🚀 Features
-
-*  Modern footwear store UI
-*  Responsive design (mobile + desktop)
-*  Product slider and category navigation
-*  Product color and size selection
-*  Online payment integration using Razorpay
-*  Fast and smooth animations
-*  Mobile responsive layout
+This project demonstrates real-world implementation of *payment gateway integration, backend APIs, and cloud database deployment*.
 
 ---
 
-##  Technologies Used
+## 🌐 Live Application
 
-* HTML5
-* CSS3
-* JavaScript
-* Razorpay Payment Gateway
-* Node.js (for payment authentication)
+- 🖥️ Frontend: https://footwear-store-84z9.vercel.app  
+- ⚙️ Backend API: https://footwear-store-13.onrender.com  
 
 ---
 
-##Project Structure
+## ✨ Key Features
 
+- Interactive product browsing experience  
+-  Product customization (size & color selection)  
+-  Secure online payments via Razorpay  
+-  Dynamic order creation using backend APIs  
+- Cloud database storage with MongoDB Atlas  
+-  Fully responsive (mobile + desktop)  
+-  Smooth animations and optimized UI  
+
+---
+
+## 🧠 What This Project Demonstrates
+
+- Full stack architecture (Frontend + Backend + Database)  
+- REST API integration  
+- Payment gateway workflow (order → payment → database)  
+- Deployment on cloud platforms  
+- Environment variable security handling  
+
+---
+
+## 🧰 Tech Stack
+
+| Layer       | Technology |
+|------------|------------|
+| Frontend   | HTML, CSS, JavaScript |
+| Backend    | Node.js, Express.js |
+| Database   | MongoDB Atlas |
+| Payment    | Razorpay |
+| Deployment | Vercel, Render |
+
+---
+
+## 🔄 Application Flow
+
+```text
+User → Select Product → Click Buy  
+     → Backend creates order (Razorpay
+ API)
+      Payment popup opens  
+     → Payment successful  
+     → Data stored in MongoDB Atlas
+
+
+Project Structure
 footwear-store/
 │
-├── backend/                  # Node.js + Express server
-│   ├── server.js             # Main server file
-│   ├── package.json          # Node dependencies
-│   ├── package-lock.json
-│   └── .env                  # Environment variables (KEY_ID, KEY_SECRET)
+├── backend/
+│   ├── server.js
+│   ├── models/
+│   ├── package.json
+│   └── .env
 │
-├── frontend/                 # HTML, CSS, JS files
-│   ├── index.html            # Main page
-│   ├── style.css             # Stylesheet
-│   ├── app.js                # Frontend logic + Razorpay integration
-│   └── img/                  # Images
-│       ├── air.png
-│       ├── jordan.png
-│       └── ...               # Other images
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   ├── app.js
+│   └── assets/
 │
-├── README.md                 # Project documentation
-└── .gitignore                # Ignore node_modules, .env, etc.
+├── .gitignore
+└── README.md
 
-## 💳 Payment Gateway
+Environment Variables
+Create a .env file inside backend:
+Environment
+MONGO_URI=your_mongodb_connection_string
+KEY_ID=your_razorpay_key_id
+KEY_SECRET=your_razorpay_secret
 
-This project integrates **Razorpay Payment Gateway** for secure online payments.
-
-Payment Flow:
-
-1. User selects a product
-2. Clicks **Buy Now**
-3. Backend creates an order
-4. Razorpay checkout popup opens
-5. Payment is completed securely
-
----
-
-## ⚙️ Installation
-
-Clone the repository:
-
-```
+Local Setup
+Bash
 git clone https://github.com/pradeep-patel06/Footwear-Store.git
-```
-
-Go to project folder:
-
-```
 cd Footwear-Store
-```
-
-Install dependencies:
-
-```
 npm install
-```
-
-Run the server:
-
-```
 node server.js
-```
+📊 Sample Database Record
+JSON
+{
+  "payment_id": "pay_xxxxxx",
+  "razorpay_order_id": "order_xxxxxx",
+  "amount": 11900,
+  "date": "2026-03-23T05:56:07.097Z"
+}
 
-Open the website:
-
-```
-http://localhost:5500
-```
-
----
-
-## 📸 Screenshots
-
-* Homepage slider
-* Product section
-* Payment gateway checkout
-* Responsive mobile design
-
----
-
-
-## 👨‍💻 Author
-
-**Pradeep Patel**
-
-* GitHub: https://github.com/pradeep-patel06/Footwear-Store
-
----
-
-
-
+Author
+Pradeep Patel
+GitHub: https://github.com/pradeep-patel06⁠�
+Project Repository: https://github.com/pradeep-patel06/Footwear-Store⁠�
+     → Payment popup opens  
+     → Payment successful  
+     → Data stored in MongoDB Atlas
