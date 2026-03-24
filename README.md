@@ -102,6 +102,4 @@ Author
 Pradeep Patel
 GitHub: https://github.com/pradeep-patel06⁠�
 Project Repository: https://github.com/pradeep-patel06/Footwear-Store⁠�
-     → Payment popup opens  
-     → Payment successful  
-     → Data stored in MongoDB Atlas
+   
