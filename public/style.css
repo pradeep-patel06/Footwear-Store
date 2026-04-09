@@ -348,15 +348,40 @@ label {
 .gallery {
   padding: 50px;
   display: flex;
+  justify-content: space-between;
 }
+
 
 .galleryItem {
   flex: 1;
   padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   /* center alignment */
+  text-align: center;
 }
+
+
+.galleryTitle {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 
 .galleryImg {
   width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.galleryImg:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 .newSeason {
@@ -560,4 +585,361 @@ footer {
     width: 90%;
     padding: 20px;
   }
+}
+
+#loginBtn, #signupBtn, #logoutBtn {
+  padding: 8px 15px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#loginBtn { background: #3498db; color: white; }
+#signupBtn { background: #2ecc71; color: white; }
+#logoutBtn { background: #e74c3c; color: white; }
+
+
+
+.authContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+
+  z-index: 999;
+}
+
+.authBox {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  position: relative;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: popup 0.3s ease;
+}
+
+.authBox input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.authBox button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.closeAuth {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+#toggleBtn {
+  color: blue;
+  cursor: pointer;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#toggleBtn {
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;   
+}
+
+.joinMsg {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+#cartContainer {
+  max-width: 800px;
+  margin: auto;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  transition: 0.3s;
+}
+
+.cartItem:hover {
+  transform: scale(1.02);
+}
+
+
+.cartItem img {
+  width: 80px;
+  border-radius: 10px;
+}
+
+
+.cartItem h3 {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.cartItem p {
+  font-weight: bold;
+}
+
+
+.cartItem button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cartItem button:hover {
+  background-color: #c0392b;
+}
+
+
+#totalPrice {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.addToCart {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.addToCart:hover {
+  background-color: #27ae60;
+}
+
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;   /* spacing between buttons */
+}
+
+
+.navItem button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+
+#loginBtn {
+  background: #3498db;
+  color: white;
+}
+
+#loginBtn:hover {
+  background: #2980b9;
+}
+
+/* 🟢 SIGNUP */
+#signupBtn {
+  background: #2ecc71;
+  color: white;
+}
+
+#signupBtn:hover {
+  background: #27ae60;
+}
+
+
+#logoutBtn {
+  background: #e74c3c;
+  color: white;
+}
+
+#logoutBtn:hover {
+  background: #c0392b;
+}
+
+
+.cartBtn {
+  position: relative;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  background: #333;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+
+.cartBtn:hover {
+  background: black;
+  transform: scale(1.05);
+}
+
+
+#cartCount {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+
+
+
+.product {
+  transition: 0.3s ease;
+  border-radius: 15px;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+productImg {
+  transition: 0.3s;
+}
+
+.product:hover .productImg {
+  transform: scale(1.08);
+}
+.productButton,
+.addToCart {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+
+.productButton {
+  background: black;
+  color: white;
+}
+
+.productButton:hover {
+  background: #444;
+}
+
+
+.addToCart {
+  background: #ff9900;
+  color: white;
+}
+
+.addToCart:hover {
+  background: #e68a00;
+}
+
+.productPrice {
+  color: #27ae60;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+size {
+  border: 1px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+
+.size:hover {
+  background: black;
+  color: white;
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color:hover {
+  border: 2px solid black;
+}
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.cartAnimate {
+  animation: bounce 0.3s ease;
+}
+
+button {
+  padding: 6px 12px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkred;
 }

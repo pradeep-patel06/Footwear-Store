@@ -27,6 +27,14 @@
             <div class="navItem">
                 <span class="limitedOffer">Limited Offer!</span>
             </div>
+            <div class="navItem">
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn">Signup</button>
+                <button id="logoutBtn" style="display:none;">Logout</button>
+                <a href="cart.html" class="cartBtn">
+                    🛒 Cart <span id="cartCount">0</span>
+                </a>
+            </div>
         </div>
         <div class="navBottom">
             <h3 class="menuItem">AIR FORCE</h3>
@@ -117,6 +125,8 @@
                 <div class="size">44</div>
             </div>
             <button class="productButton">BUY NOW!</button>
+
+            <button class="addToCart">ADD TO CART</button>
         </div>
         <div class="payment">
             <h1 class="payTitle">Personal Information</h1>
@@ -176,39 +186,43 @@
                 alt="" class="nsImg">
         </div>
     </div>
+
+
     <footer>
         <div class="footerLeft">
+
+            
 
             <div class="footerMenu">
                 <h1 class="fMenuTitle">About Us</h1>
                 <ul class="fList">
-                    <li class="fListItem"><a href="company.html">Company</a></li>
-                    <li class="fListItem"><a href="contact.html">Contact</a></li>
-                    <li class="fListItem"><a href="careers.html">Careers</a></li>
-                    <li class="fListItem"><a href="affiliates.html">Affiliates</a></li>
-                    <li class="fListItem"><a href="stores.html">Stores</a></li>
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
                 </ul>
             </div>
 
             <div class="footerMenu">
                 <h1 class="fMenuTitle">Useful Links</h1>
                 <ul class="fList">
-                    <li class="fListItem"><a href="#">Support</a></li>
-                    <li class="fListItem"><a href="#">Refund</a></li>
-                    <li class="fListItem"><a href="#">FAQ</a></li>
-                    <li class="fListItem"><a href="#">Feedback</a></li>
-                    <li class="fListItem"><a href="#">Stories</a></li>
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stories</li>
                 </ul>
             </div>
 
             <div class="footerMenu">
                 <h1 class="fMenuTitle">Products</h1>
                 <ul class="fList">
-                    <li class="fListItem"><a href="#product">Air Force</a></li>
-                    <li class="fListItem"><a href="#product">Air Jordan</a></li>
-                    <li class="fListItem"><a href="#product">Blazer</a></li>
-                    <li class="fListItem"><a href="#product">Crater</a></li>
-                    <li class="fListItem"><a href="#product">Hippie</a></li>
+                    <li class="fListItem">Air Force</li>
+                    <li class="fListItem">Air Jordan</li>
+                    <li class="fListItem">Blazer</li>
+                    <li class="fListItem">Crater</li>
+                    <li class="fListItem">Hippie</li>
                 </ul>
             </div>
 
@@ -220,6 +234,7 @@
                     <input type="text" placeholder="your@email.com" class="fInput">
                     <button class="fButton">Join!</button>
                 </div>
+                <p class="joinMsg"></p>
             </div>
             <div class="footerRightMenu">
                 <h1 class="fMenuTitle">Follow Us</h1>
@@ -237,8 +252,23 @@
             </div>
         </div>
     </footer>
+    <div class="authContainer" id="authContainer">
+        <div class="authBox">
+            <span class="closeAuth">X</span>
+
+            <h2 id="formTitle">Login</h2>
+
+            <input type="text" id="name" placeholder="Name" style="display:none;">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+
+            <button id="submitBtn">Submit</button>
+
+            <p id="toggleText">
+                Don't have account? <span id="toggleBtn">Signup</span>
+            </p>
+        </div>
+    </div>
     <script src="./app.js"></script>
-    
+
 </body>
-
-
