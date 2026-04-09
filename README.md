@@ -1,105 +1,101 @@
-# 🛍️ Footwear Store – Full Stack E-Commerce Website
+# Footwear Store – Full Stack E-Commerce Website
 
-A *production-ready full stack e-commerce web application* that enables users to browse products, make secure online payments, and store order data in the cloud.
+A **production-ready full stack e-commerce application** that allows users to browse products, make secure online payments, manage orders, and for admins to control the store operations.  
 
-This project demonstrates real-world implementation of *payment gateway integration, backend APIs, and cloud database deployment*.
+This project demonstrates **real-world e-commerce functionalities**, including payment integration, authentication & authorization, cloud database usage, and admin dashboard management.
 
 ---
 
 ## 🌐 Live Application
-
-- 🖥️ Frontend: https://footwear-store-84z9.vercel.app  
-- ⚙️ Backend API: https://footwear-store-13.onrender.com  
+- **Frontend:** [https://footwear-store-84z9.vercel.app](https://footwear-store-84z9.vercel.app)  
+- **Backend API:** [https://footwear-store-13.onrender.com](https://footwear-store-13.onrender.com)
 
 ---
 
 ## ✨ Key Features
 
-- Interactive product browsing experience  
--  Product customization (size & color selection)  
--  Secure online payments via Razorpay  
--  Dynamic order creation using backend APIs  
-- Cloud database storage with MongoDB Atlas  
--  Fully responsive (mobile + desktop)  
--  Smooth animations and optimized UI  
+### User Features
+- **User Authentication & Authorization** – Secure login/signup using JWT  
+- **Product Browsing & Customization** – Choose size, color, quantity  
+- **Cart System** – Add, remove, or update products  
+- **Secure Payments** – Razorpay integration for online payments  
+- **Order Management** – View order history, cancel orders, request refunds  
+- **Cloud Storage** – User orders and payment info stored in MongoDB Atlas  
+
+### Admin Features
+- **Admin Panel** – Manage products, users, and orders  
+- **Order Operations** – Cancel orders, mark as shipped, process refunds  
+- **Analytics Overview** – See total orders, revenue, and status of payments  
 
 ---
 
 ## 🧠 What This Project Demonstrates
-
-- Full stack architecture (Frontend + Backend + Database)  
-- REST API integration  
-- Payment gateway workflow (order → payment → database)  
-- Deployment on cloud platforms  
-- Environment variable security handling  
+- Full stack architecture: **Frontend + Backend + Database**  
+- **REST APIs** for product, cart, order, and payment handling  
+- Payment workflow: **Order → Payment → Database**  
+- Role-based access control: **Admin vs User**  
+- Cloud deployment on **Render**  
+- Secure management of **environment variables**
 
 ---
 
 ## 🧰 Tech Stack
 
-| Layer       | Technology |
-|------------|------------|
-| Frontend   | HTML, CSS, JavaScript |
-| Backend    | Node.js, Express.js |
-| Database   | MongoDB Atlas |
-| Payment    | Razorpay |
-| Deployment | Vercel, Render |
+| Layer      | Technology                    |
+|------------|-------------------------------|
+| Frontend   | HTML, CSS, JavaScript         |
+| Backend    | Node.js, Express.js           |
+| Database   | MongoDB Atlas                 |
+| Payment    | Razorpay                      |
+| Deployment |  Render                |
 
 ---
 
 ## 🔄 Application Flow
-
-```text
-User → Select Product → Click Buy  
-     → Backend creates order (Razorpay
- API)
-      Payment popup opens  
-     → Payment successful  
-     → Data stored in MongoDB Atlas
+User → Browse Products → Add to Cart → Buy Now
+→ Backend Creates Razorpay Order
+→ Payment Popup Opens
+→ Payment Successful
+→ Order + Payment Data Stored in MongoDB Atlas
+→ Admin Can View / Cancel / Ship / Refund
 
 
-Project Structure
+---
+
+## Project Structure
 footwear-store/
 │
 ├── backend/
-│   ├── server.js
-│   ├── models/
-│   ├── package.json
-│   └── .env
+│ ├── server.js
+│ ├── models/
+│ ├── routes/
+│ ├── middleware/
+│ ├── package.json
+│ └── .env
 │
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   ├── app.js
-│   └── assets/
+│ ├── index.html
+│ ├── style.css
+│ ├── app.js
+│ └── assets/
 │
 ├── .gitignore
 └── README.md
 
-Environment Variables
-Create a .env file inside backend:
-Environment
+
+---
+
+## Environment Variables
+Create a `.env` file inside `backend/`:
 MONGO_URI=your_mongodb_connection_string
 KEY_ID=your_razorpay_key_id
 KEY_SECRET=your_razorpay_secret
-
-Local Setup
-Bash
-git clone https://github.com/pradeep-patel06/Footwear-Store.git   
-cd Footwear-Store
-npm install
-node server.js
-📊 Sample Database Record
-JSON
-{
-  "payment_id": "pay_xxxxxx",
-  "razorpay_order_id": "order_xxxxxx",
-  "amount": 11900,
-  "date": "2026-03-23T05:56:07.097Z"
-}
+JWT_SECRET=your_jwt_secret
 
 Author
+
 Pradeep Patel
-GitHub: https://github.com/pradeep-patel06⁠
-Project Repository: https://github.com/pradeep-patel06/Footwear-Store⁠
-   
+
+GitHub: https://github.com/pradeep-patel06
+Project Repository: Footwear Store
+
