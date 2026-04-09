@@ -7,7 +7,7 @@ This project demonstrates **real-world e-commerce functionalities**, including p
 ---
 
 ## 🌐 Live Application
-- **Frontend:** [https://footwear-store-84z9.vercel.app](https://footwear-store-84z9.vercel.app)  
+
 - **Backend API:** [https://footwear-store-13.onrender.com](https://footwear-store-13.onrender.com)
 
 ---
@@ -97,5 +97,7 @@ Author
 Pradeep Patel
 
 GitHub: https://github.com/pradeep-patel06
+
+
 Project Repository: Footwear Store
 
