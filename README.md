@@ -8,7 +8,8 @@ This project demonstrates **real-world e-commerce functionalities**, including p
 
 ## 🌐 Live Application
 
-- **Backend API:** [https://footwear-store-13.onrender.com](https://footwear-store-13.onrender.com)
+- **Backend API:**  https://footwear-store-14.onrender.com
+- **frontend**      https://footwear-store-v3zd.vercel.app
 
 ---
 
@@ -21,7 +22,7 @@ This project demonstrates **real-world e-commerce functionalities**, including p
 - **Secure Payments** – Razorpay integration for online payments  
 - **Order Management** – View order history, cancel orders, request refunds  
 - **Cloud Storage** – User orders and payment info stored in MongoDB Atlas  
-
+  
 ### Admin Features
 - **Admin Panel** – Manage products, users, and orders  
 - **Order Operations** – Cancel orders, mark as shipped, process refunds  
@@ -34,7 +35,7 @@ This project demonstrates **real-world e-commerce functionalities**, including p
 - **REST APIs** for product, cart, order, and payment handling  
 - Payment workflow: **Order → Payment → Database**  
 - Role-based access control: **Admin vs User**  
-- Cloud deployment on **Render**  
+- Cloud deployment  backend on **Render** and frontend on vercel 
 - Secure management of **environment variables**
 
 ---
@@ -47,7 +48,7 @@ This project demonstrates **real-world e-commerce functionalities**, including p
 | Backend    | Node.js, Express.js           |
 | Database   | MongoDB Atlas                 |
 | Payment    | Razorpay                      |
-| Deployment |  Render                |
+| Deployment |  Render    vercel            |
 
 ---
 
@@ -99,5 +100,5 @@ Pradeep Patel
 GitHub: https://github.com/pradeep-patel06
 
 
-Project Repository: Footwear Store
+
 
