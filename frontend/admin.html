@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard </title>
+</head>
+
+<body>
+
+<h1>Admin Dashboard </h1>
+
+<div id="orders"></div>
+
+<script>
+async function loadOrders() {
+
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    alert("Login first ");
+    window.location.href = "/";
+    return;
+  }
+
+  const res = await await fetch("https://footwear-store-14.onrender.com/api/admin/orders",{
+    headers: { 
+      "Authorization": token   
+    }
+  });
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    alert(data.message);
+    return;
+  }
+
+  let html = "";
+
+  data.forEach(order => {
+    html += `
+      <div>
+        <h3>Order ID: ${order._id}</h3>
+        <p>Amount: ₹${order.amount}</p>
+        <p>Status: ${order.status}</p>
+
+        <select onchange="updateStatus('${order._id}', this.value)">
+          <option ${order.status==="Processing"?"selected":""}>Processing</option>
+          <option ${order.status==="Shipped"?"selected":""}>Shipped</option>
+          <option ${order.status==="Delivered"?"selected":""}>Delivered</option>
+          <option ${order.status==="Cancelled"?"selected":""}>Cancelled</option>
+        </select>
+
+        <hr/>
+      </div>
+    `;
+  });
+
+  document.getElementById("orders").innerHTML = html;
+}
+
+async function updateStatus(id, status) {
+
+  const token = localStorage.getItem("token");
+
+  await fetch("https://footwear-store-14.onrender.com/api/admin/order/status", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": token   
+    },
+    body: JSON.stringify({ orderId: id, status })
+  });
+
+  alert("Updated ");
+  loadOrders();
+}
+
+loadOrders();
+</script>
+
+</body>
+</html>
