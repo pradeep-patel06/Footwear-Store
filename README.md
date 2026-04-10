@@ -48,7 +48,7 @@ This project demonstrates **real-world e-commerce functionalities**, including p
 | Backend    | Node.js, Express.js           |
 | Database   | MongoDB Atlas                 |
 | Payment    | Razorpay                      |
-| Deployment |  Render    vercel            |
+| Deployment |  Render ,   vercel            |
 
 ---
 
